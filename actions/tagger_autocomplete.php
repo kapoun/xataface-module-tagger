@@ -143,6 +143,7 @@ class actions_tagger_autocomplete {
 				throw new Exception($relationship->getMessage());
 			}
 			
+      import( 'Dataface/QueryTool.php');
 			$qt = Dataface_QueryTool::loadResult($domainTableName, null, array('-skip'=>0, '-limit'=>500));
 			$count = $qt->cardinality();
 			
